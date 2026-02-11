@@ -1,0 +1,23 @@
+{
+  "personalInfo": {
+    "name": "Md Ziaul Haque Arafat",
+    "designations": [
+      "MERN Stack Developer",
+      "Frontend Developer",
+      "Full Stack Developer"
+    ],
+    "introduction": "A passionate MERN Stack Web Developer focused on building clean, functional, and user-centric web applications. I love solving complex problems with JavaScript and constantly exploring new technologies to sharpen my backend skills.",
+    "location": "Chittagong, Bangladesh",
+    "profileImage": "https://avatars.githubusercontent.com/u/85094984?v=4",
+    "resumeLink": "/resume.pdf"
+  },
+  "socialLinks": {
+    "github": "https://github.com/ziaulhoquearafat",
+    "linkedin": "https://www.linkedin.com/in/ziaul-hoque-arafat/"
+  },
+  "contact": {
+    "email": "mdarafat3167@gmail.com",
+    "phone": "+8801766952640",
+    "whatsapp": "+8801766952640"
+  }
+}

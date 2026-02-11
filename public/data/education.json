@@ -1,0 +1,19 @@
+{
+  "education": [
+    {
+      "type": "Professional Certification",
+      "degree": "Complete Web Development Course",
+      "institution": "Programming Hero",
+      "duration": "2025",
+      "description": "Mastered MERN stack development, built multiple full-stack projects, and gained hands-on experience in modern web technologies.",
+      "image": "/images/ph-certificate.jpg"
+    },
+    {
+      "type": "Academic",
+      "degree": "BA (Hons) in Arabic Language and Literature (ALL)",
+      "institution": "National University",
+      "duration": "2022 - 2026",
+      "description": "Focused on academic studies alongside developing a strong foundation in self-taught programming."
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "id": "book-courier",
+    "name": "Book Courier",
+    "image": "/images/projects/book-courier.jpg",
+    "techStack": [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Stripe",
+      "Firebase"
+    ],
+    "description": "A full-stack book ordering platform with role-based access control and secure Stripe payment integration.",
+    "longDescription": "Book Courier is a comprehensive MERN stack platform designed to streamline book ordering and management. It features a robust role-based access system for Admins, Librarians, and Users. Users can browse, wishlist, and order books with secure Stripe payments. Librarians handle book uploads and order fulfillment, while Admins manage the entire user base and platform settings. The app ensures a seamless experience with real-time order tracking and a review system for delivered items.",
+    "liveLink": "https://bookcourier-52506.web.app/",
+    "githubClient": "https://github.com/ziaulhoquearafat/book-courier-client",
+    "githubServer": "https://github.com/ziaulhoquearafat/book-courier-server",
+    "challenges": "Implementing secure route protection for three distinct roles (Admin, Librarian, User) using Firebase and custom JWT middleware was a major challenge. Additionally, synchronizing payment success states with real-time database updates for orders required complex backend logic.",
+    "improvements": "Plan to integrate an automated PDF invoice generation system and real-time push notifications via Socket.io for order status changes.",
+    "futurePlans": "Scaling to a multi-vendor library system and implementing an AI-driven book recommendation engine based on user reading history."
+  },
+  {
+    "id": "study-mate",
+    "name": "Study Mate",
+    "image": "/images/projects/study-mate.jpg",
+    "techStack": ["React", "Express", "MongoDB", "Firebase", "Tailwind CSS"],
+    "description": "A community-based platform designed to connect students for collaborative study sessions based on their expertise.",
+    "longDescription": "Study Mate is a social utility for students to find the perfect study partners. It allows users to create detailed profiles, post study requests specifying subject expertise, and browse requests from others. The platform features an intuitive filtering system to match partners by experience level and subject. With integrated Firebase authentication and a clean, responsive UI built with Tailwind, it focuses on making academic collaboration fast and secure.",
+    "liveLink": "https://study-mate-728a9.web.app/",
+    "githubClient": "https://github.com/ziaulhoquearafat/study-mate-client",
+    "githubServer": "https://github.com/ziaulhoquearafat/study-mate-server",
+    "challenges": "Developing a dynamic real-time filtering logic that handles multiple criteria simultaneously while maintaining UI performance was challenging. Also, managing state for the custom dark/light mode toggle required a global state approach to prevent flickering.",
+    "improvements": "Integration of an in-app real-time messaging system and a scheduling tool to book study sessions directly through the platform.",
+    "futurePlans": "Expanding into a full-scale learning community with virtual study rooms, collaborative whiteboards, and peer-to-peer rating systems."
+  },
+  {
+    "id": "skill-swap",
+    "name": "SkillSwap",
+    "image": "/images/projects/skill-swap.jpg",
+    "techStack": ["React", "Tailwind CSS", "AOS", "Swiper", "Firebase"],
+    "description": "An interactive learning platform for exploring trending skills and booking personalized professional sessions.",
+    "longDescription": "SkillSwap is an online marketplace for skills, connecting learners with expert providers. The platform focuses on high-quality visuals and smooth user interactions using AOS and Swiper. Users can explore various trending skills, view professional ratings, and book one-to-one learning sessions. It simplifies the learning journey by providing a centralized dashboard for discovery, featuring top-rated providers and a streamlined booking workflow.",
+    "liveLink": "https://skillswap-543a5.web.app/",
+    "githubClient": "https://github.com/ziaulhoquearafat/skill-swap",
+    "githubServer": null,
+    "challenges": "Optimizing scroll-based animations (AOS) for low-end mobile devices without compromising layout stability was a key hurdle. Also, creating a multi-step booking form with real-time validation and Firebase backend synchronization required careful state management.",
+    "improvements": "Adding a dedicated provider dashboard for instructors to manage their sessions and a public review/rating system for each skill listed.",
+    "futurePlans": "Introducing a real-time booking calendar with timezone support and an integrated video conferencing tool for remote learning sessions."
+  }
+]

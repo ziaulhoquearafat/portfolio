@@ -1,0 +1,16 @@
+{
+  "aboutMe": {
+    "title": "My Journey & Who I Am",
+    "description": {
+      "journey": "My journey in the tech world began with a deep interest in how the web works, leading me to spend some time exploring SEO and search engine dynamics. However, my passion for building things from scratch eventually drew me towards full-stack development. Now, as a MERN Stack Developer, I dedicate my time to creating interactive, user-centric web applications and solving complex architectural challenges with JavaScript.",
+      "passion": "I enjoy the challenge of connecting a clean, interactive frontend with a robust backend. My current focus is strengthening my backend knowledge to build more scalable and efficient systems.",
+      "personality": "I'm a problem solver at heart. Whether it's a tricky JavaScript bug or a complex UI layout, I don't stop until I find the most elegant solution."
+    },
+    "hobbies": [
+      "Exploring New Technologies",
+      "Problem Solving on Codewars",
+      "Photography",
+      "Traveling"
+    ]
+  }
+}

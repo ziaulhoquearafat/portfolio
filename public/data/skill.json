@@ -1,0 +1,29 @@
+{
+  "skills": {
+    "frontend": [
+      { "name": "HTML5", "level": 95, "icon": "SiHtml5" },
+      { "name": "CSS3", "level": 90, "icon": "SiCss3" },
+      { "name": "JavaScript (ES6+)", "level": 88, "icon": "SiJavascript" },
+      { "name": "React.js", "level": 92, "icon": "SiReact" },
+      { "name": "Next.js", "level": 80, "icon": "SiNextdotjs" },
+      { "name": "Tailwind CSS", "level": 95, "icon": "SiTailwindcss" },
+      { "name": "React Query", "level": 85, "icon": "SiReactquery" },
+      { "name": "React Hook Form", "level": 88, "icon": "SiReacthookform" }
+    ],
+    "backend": [
+      { "name": "Node.js", "level": 75, "icon": "SiNodedotjs" },
+      { "name": "Express.js", "level": 80, "icon": "SiExpress" },
+      { "name": "MongoDB", "level": 82, "icon": "SiMongodb" },
+      { "name": "JWT Auth", "level": 85, "icon": "SiJsonwebtokens" },
+      { "name": "Stripe (Payments)", "level": 70, "icon": "SiStripe" },
+      { "name": "Firebase Auth", "level": 85, "icon": "SiFirebase" }
+    ],
+    "tools": [
+      { "name": "Git & GitHub", "level": 88, "icon": "SiGithub" },
+      { "name": "VS Code", "level": 90, "icon": "SiVisualstudiocode" },
+      { "name": "Figma", "level": 70, "icon": "SiFigma" },
+      { "name": "Vercel", "level": 85, "icon": "SiVercel" },
+      { "name": "Netlify", "level": 85, "icon": "SiNetlify" }
+    ]
+  }
+}
