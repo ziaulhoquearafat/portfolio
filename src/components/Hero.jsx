@@ -1,20 +1,20 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
-import { useFetchData } from '../hooks/useFetchData.js';
+import { useGSAP } from "@gsap/react";
+import { motion } from "framer-motion";
+import gsap from "gsap";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { useFetchData } from "../hooks/useFetchData.js";
 
-const FALLBACK_TITLES = ['MERN Stack Developer', 'Frontend Developer'];
+const FALLBACK_TITLES = ["MERN Stack Developer", "Frontend Developer"];
 const TYPING_SPEED = 80; // ms per character
 const PAUSE_BETWEEN = 1200; // ms pause when full word is shown
 
 const Hero = () => {
-  const { data, loading, error } = useFetchData('personalInfo.json');
+  const { data, loading, error } = useFetchData("personalInfo.json");
   const imageRef = useRef(null);
 
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
-  const [displayedText, setDisplayedText] = useState('');
+  const [displayedText, setDisplayedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
 
   const { personalInfo, socialLinks } = useMemo(
@@ -37,24 +37,27 @@ const Hero = () => {
 
     const fullText = designations[currentTitleIndex] || designations[0];
 
-    const timeout = setTimeout(() => {
-      if (!isDeleting) {
-        // Typing characters
-        if (displayedText.length < fullText.length) {
-          setDisplayedText(fullText.slice(0, displayedText.length + 1));
+    const timeout = setTimeout(
+      () => {
+        if (!isDeleting) {
+          // Typing characters
+          if (displayedText.length < fullText.length) {
+            setDisplayedText(fullText.slice(0, displayedText.length + 1));
+          } else {
+            // Word fully typed, pause then start deleting
+            setIsDeleting(true);
+          }
+        } else if (displayedText.length > 0) {
+          // Deleting characters
+          setDisplayedText(fullText.slice(0, displayedText.length - 1));
         } else {
-          // Word fully typed, pause then start deleting
-          setIsDeleting(true);
+          // Finished deleting, move to next designation
+          setIsDeleting(false);
+          setCurrentTitleIndex((prev) => (prev + 1) % designations.length);
         }
-      } else if (displayedText.length > 0) {
-        // Deleting characters
-        setDisplayedText(fullText.slice(0, displayedText.length - 1));
-      } else {
-        // Finished deleting, move to next designation
-        setIsDeleting(false);
-        setCurrentTitleIndex((prev) => (prev + 1) % designations.length);
-      }
-    }, isDeleting ? TYPING_SPEED / 1.5 : TYPING_SPEED);
+      },
+      isDeleting ? TYPING_SPEED / 1.5 : TYPING_SPEED,
+    );
 
     return () => clearTimeout(timeout);
   }, [designations, currentTitleIndex, displayedText, isDeleting]);
@@ -76,7 +79,7 @@ const Hero = () => {
       gsap.to(imageRef.current, {
         y: -12,
         duration: 2.2,
-        ease: 'power1.inOut',
+        ease: "power1.inOut",
         yoyo: true,
         repeat: -1,
       });
@@ -139,7 +142,7 @@ const Hero = () => {
         className="order-last space-y-6 md:order-first"
         initial={{ opacity: 0, x: -40 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.7, ease: 'easeOut' }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
       >
         <p className="text-sm font-medium uppercase tracking-[0.25em] text-secondary">
           Hello, I am
@@ -147,7 +150,7 @@ const Hero = () => {
 
         <div className="space-y-2">
           <h1 className="text-3xl font-bold leading-tight text-base-content md:text-4xl lg:text-5xl">
-            {personalInfo.name || 'Md Ziaul Haque Arafat'}
+            {personalInfo.name || "Md Ziaul Haque Arafat"}
           </h1>
 
           <div className="flex items-center gap-2 text-lg md:text-xl">
@@ -199,9 +202,7 @@ const Hero = () => {
               <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-base-200 text-base-content shadow-sm">
                 <FaGithub />
               </span>
-              <span className="hidden text-xs md:inline">
-                GitHub Profile
-              </span>
+              <span className="hidden text-xs md:inline">GitHub Profile</span>
             </a>
           )}
 
@@ -215,9 +216,7 @@ const Hero = () => {
               <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-base-200 text-base-content shadow-sm">
                 <FaLinkedin />
               </span>
-              <span className="hidden text-xs md:inline">
-                LinkedIn Profile
-              </span>
+              <span className="hidden text-xs md:inline">LinkedIn Profile</span>
             </a>
           )}
         </div>
@@ -227,4 +226,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
