@@ -1,9 +1,9 @@
-import { useEffect, useRef } from 'react';
-import { Link, useParams } from 'react-router';
-import { FaExternalLinkAlt, FaGithub, FaServer } from 'react-icons/fa';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
-import { useFetchData } from '../hooks/useFetchData.js';
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { useRef } from "react";
+import { FaExternalLinkAlt, FaGithub, FaServer } from "react-icons/fa";
+import { Link, useParams } from "react-router";
+import { useFetchData } from "../hooks/useFetchData.js";
 
 gsap.registerPlugin(useGSAP);
 
@@ -13,34 +13,29 @@ const ProjectDetails = () => {
   const heroRef = useRef(null);
   const contentRef = useRef(null);
 
-  const {
-    data: projects,
-    loading,
-    error,
-  } = useFetchData('projects.json');
+  const { data: projects, loading, error } = useFetchData("projects.json");
 
   // GSAP page transition animation
   useGSAP(
     () => {
       if (!containerRef.current || loading) return;
 
-      const tl = gsap.timeline({ defaults: { ease: 'power2.out' } });
+      const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
 
       tl.from(heroRef.current, {
         opacity: 0,
         y: 30,
         duration: 0.6,
-      })
-        .from(
-          contentRef.current?.children || [],
-          {
-            opacity: 0,
-            y: 20,
-            duration: 0.4,
-            stagger: 0.1,
-          },
-          '-=0.3',
-        );
+      }).from(
+        contentRef.current?.children || [],
+        {
+          opacity: 0,
+          y: 20,
+          duration: 0.4,
+          stagger: 0.1,
+        },
+        "-=0.3",
+      );
     },
     { scope: containerRef, dependencies: [loading] },
   );
@@ -82,7 +77,10 @@ const ProjectDetails = () => {
     <div ref={containerRef} className="max-w-5xl mx-auto space-y-8 pb-12">
       {/* Hero Image */}
       {project.image && (
-        <div ref={heroRef} className="relative w-full h-[40vh] md:h-[50vh] rounded-2xl overflow-hidden shadow-xl">
+        <div
+          ref={heroRef}
+          className="relative w-full h-[40vh] md:h-[50vh] rounded-2xl overflow-hidden shadow-xl"
+        >
           <img
             src={project.image}
             alt={project.name}
@@ -196,7 +194,7 @@ const ProjectDetails = () => {
                   </h2>
                   <ul className="list-disc list-inside space-y-1 text-base text-base-content/80">
                     {project.improvements
-                      .split('.')
+                      .split(".")
                       .filter((item) => item.trim())
                       .map((item, idx) => (
                         <li key={idx}>{item.trim()}</li>
@@ -212,7 +210,7 @@ const ProjectDetails = () => {
                   </h2>
                   <ul className="list-disc list-inside space-y-1 text-base text-base-content/80">
                     {project.futurePlans
-                      .split('.')
+                      .split(".")
                       .filter((item) => item.trim())
                       .map((item, idx) => (
                         <li key={idx}>{item.trim()}</li>

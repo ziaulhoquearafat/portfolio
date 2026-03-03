@@ -1,6 +1,6 @@
-import { Link } from 'react-router';
-import { motion } from 'framer-motion';
-import { useFetchData } from '../hooks/useFetchData.js';
+import { motion } from "framer-motion";
+import { Link } from "react-router";
+import { useFetchData } from "../hooks/useFetchData.js";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 30, scale: 0.95 },
@@ -11,13 +11,13 @@ const cardVariants = {
     transition: {
       delay: 0.1 * index,
       duration: 0.4,
-      ease: 'easeOut',
+      ease: "easeOut",
     },
   }),
 };
 
 const Projects = () => {
-  const { data: projects, loading, error } = useFetchData('projects.json');
+  const { data: projects, loading, error } = useFetchData("projects.json");
 
   if (loading) {
     return (
@@ -67,12 +67,12 @@ const Projects = () => {
               custom={index}
               whileHover={{
                 scale: 1.03,
-                boxShadow: '0 20px 40px rgba(0,0,0,0.15)',
+                boxShadow: "0 20px 40px rgba(0,0,0,0.15)",
               }}
             >
               {/* Project Image */}
               {project.image && (
-                <figure className="relative h-48 overflow-hidden bg-base-200">
+                <figure className="relative overflow-hidden bg-base-200">
                   <img
                     src={project.image}
                     alt={project.name}
