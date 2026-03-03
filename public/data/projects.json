@@ -2,7 +2,7 @@
   {
     "id": "book-courier",
     "name": "Book Courier",
-    "image": "/src/assets/book-courier-front-img-header.png",
+    "image": "/book-courier-front-img-header.png",
     "techStack": [
       "React",
       "Node.js",
@@ -24,7 +24,7 @@
   {
     "id": "study-mate",
     "name": "Study Mate",
-    "image": "/src/assets/study-mate-front-img.png",
+    "image": "/study-mate-front-img.png",
     "techStack": ["React", "Express", "MongoDB", "Firebase", "Tailwind CSS"],
     "description": "A community-based platform designed to connect students for collaborative study sessions based on their expertise.",
     "longDescription": "Study Mate is a social utility for students to find the perfect study partners. It allows users to create detailed profiles, post study requests specifying subject expertise, and browse requests from others. The platform features an intuitive filtering system to match partners by experience level and subject. With integrated Firebase authentication and a clean, responsive UI built with Tailwind, it focuses on making academic collaboration fast and secure.",
@@ -38,7 +38,7 @@
   {
     "id": "skill-swap",
     "name": "SkillSwap",
-    "image": "/src/assets/skill-swap-front-img.png",
+    "image": "/skill-swap-front-img.png",
     "techStack": ["React", "Tailwind CSS", "AOS", "Swiper", "Firebase"],
     "description": "An interactive learning platform for exploring trending skills and booking personalized professional sessions.",
     "longDescription": "SkillSwap is an online marketplace for skills, connecting learners with expert providers. The platform focuses on high-quality visuals and smooth user interactions using AOS and Swiper. Users can explore various trending skills, view professional ratings, and book one-to-one learning sessions. It simplifies the learning journey by providing a centralized dashboard for discovery, featuring top-rated providers and a streamlined booking workflow.",
